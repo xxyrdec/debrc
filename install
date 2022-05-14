@@ -1,4 +1,4 @@
-sudo apt install git screen xorg vim w3m build-essential libx11-dev libxft-dev libxinerama-dev wget apt-transport-https curl libreoffice r-base libopenblas-base gdebi-core pulseaudio pavucontrol evince groff-base texlive-full shotcut farbfeld alsa** bc module-assistant dkms android-sdk-platform-tools fzf android-tools-adb
+sudo apt install git screen xorg vim w3m build-essential libx11-dev libxft-dev libxinerama-dev wget apt-transport-https curl libreoffice r-base libopenblas-base gdebi-core pulseaudio pavucontrol evince groff-base texlive-full shotcut farbfeld alsa** bc module-assistant dkms android-sdk-platform-tools fzf android-tools-adb keepassxc obs-studio mpv
 
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/dmenu
