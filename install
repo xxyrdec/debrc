@@ -1,4 +1,4 @@
-sudo apt install git screen xorg vim w3m build-essential libx11-dev libxft-dev libxinerama-dev wget apt-transport-https curl libreoffice r-base libopenblas-base gdebi-core pulseaudio pavucontrol evince groff-base texlive-full shotcut farbfeld alsa**
+sudo apt install git screen xorg vim w3m build-essential libx11-dev libxft-dev libxinerama-dev wget apt-transport-https curl libreoffice r-base libopenblas-base gdebi-core pulseaudio pavucontrol evince groff-base texlive-full shotcut farbfeld alsa** bc module-assistant dkms android-sdk-platform-tools fzf android-tools-adb
 
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/dmenu
@@ -7,6 +7,8 @@ git clone https://git.suckless.org/sent
 
 
 ----------------------------------------------------
+APPS AND HOW TO INSTALL
+
 
 r & rstudio
 1. wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.2-485-amd64.deb
@@ -24,3 +26,19 @@ brave
 2. echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 3. sudo apt update
 4. sudo apt install brave-browser
+
+wifi_driver
+1. git clone https://github.com/tomaspinho/rtl8821ce.git
+2. make
+3. sudo make install clean
+4. sudo m-a prepare
+5. sudo ./dkms-install.sh
+6. wpa_passphrase your-ESSID your-wifi-passphrase | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
+7. sudo wpa_supplicant -B -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlp3s0
+8. sudo dhclient wlp3s0
+9. sudo reboot
+
+uad-gui
+1. dl tar gz
+2. tar -zxvf
+3. ./uad
